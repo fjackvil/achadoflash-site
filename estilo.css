@@ -23,3 +23,7 @@ header p{margin:0;color:#ddd}
 .vazio{text-align:center;color:#ddd;padding:32px 0}
 footer{font-size:.8rem;color:#bbb;text-align:center;padding:16px 0 32px}
 footer a{color:#ffc400}
+.texto h1{color:#ffc400;font-size:1.4rem}
+.texto h2{font-size:1.05rem;margin:20px 0 4px;color:#ffc400}
+.texto p,.texto li{color:#eee}
+.texto a{color:#ffc400}
