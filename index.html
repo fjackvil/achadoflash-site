@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AchadoFlash · Achadinhos com link</title>
+<meta name="description" content="Viu um achadinho no vídeo do AchadoFlash? Procure o número e abra o produto.">
+<meta name="theme-color" content="#1b1030">
+<link rel="icon" href="icone.png"><link rel="apple-touch-icon" href="icone.png">
+<link rel="stylesheet" href="estilo.css"></head><body><main>
+<header><img src="icone.png" alt="AchadoFlash"><h1>AchadoFlash</h1><p>Viu no vídeo? Digite o número do produto:</p></header>
+<form class="busca" id="busca"><input id="numero" type="number" inputmode="numeric" min="1" placeholder="Nº do produto" aria-label="Número do produto"><button>Ir</button></form>
+<p id="aviso"></p>
+<article class="item" id="n2">
+<span class="num">Nº 2</span>
+<img src="img/n002.jpg" alt="Suporte de parede multifuncional caixa" loading="lazy" width="480" height="480">
+<div class="info">
+<h2>Suporte de parede multifuncional caixa</h2>
+<p class="preco">R$ 9,89 <span class="desc">-62%</span></p>
+<p class="dados">⭐ 4,9 · +8 mil vendidos</p>
+<a class="botao" href="https://s.shopee.com.br/3LSacq1c87" target="_blank" rel="sponsored noopener">Ver na Shopee ›</a>
+</div>
+</article>
+<article class="item" id="n1">
+<span class="num">Nº 1</span>
+<img src="img/n001.jpg" alt="Luminárias solares impermeáveis" loading="lazy" width="480" height="480">
+<div class="info">
+<h2>Luminárias solares impermeáveis</h2>
+<p class="preco">R$ 23,99 <span class="desc">-47%</span></p>
+<p class="dados">⭐ 4,8 · +6 mil vendidos</p>
+<a class="botao" href="https://s.shopee.com.br/W8PFazwMc" target="_blank" rel="sponsored noopener">Ver na Shopee ›</a>
+</div>
+</article>
+<footer>
+<p>#publi · Somos afiliados da Shopee: comprando por estes links, podemos ganhar uma comissão, sem custo a mais
+para você. Preço e estoque podem mudar; confira na Shopee antes de comprar. Os vídeos usam imagens dos anúncios e
+voz gerada por IA.</p>
+<p><a href="https://www.instagram.com/achadoflashbrasil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@achadoflashbrasil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.youtube.com/@AchadoFlashBrasil" target="_blank" rel="noopener">YouTube</a></p>
+<p>Atualizado em 21/11/2026 às 21:01</p>
+</footer></main>
+<script>const busca=document.getElementById('busca'),aviso=document.getElementById('aviso');
+function ir(n){document.querySelectorAll('.achado').forEach(e=>e.classList.remove('achado'));
+const el=document.getElementById('n'+n);
+if(!el){aviso.textContent=n?'O produto nº '+n+' ainda não está aqui.':'';return}
+aviso.textContent='';el.classList.add('achado');el.scrollIntoView({behavior:'smooth'})}
+busca.addEventListener('submit',ev=>{ev.preventDefault();ir(parseInt(document.getElementById('numero').value,10))});
+const h=parseInt(location.hash.replace(/\D/g,''),10);if(h)setTimeout(()=>ir(h),200);
+</script>
+</body></html>
